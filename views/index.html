@@ -1,0 +1,118 @@
+<head>
+  <script src="../models/car.js"></script>
+  <script src="../models/wheel.js"></script>
+  <script src="../controllers/controller.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"
+  ></script>
+
+  <style>
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center">Ejercicio Vehículos</h1>
+  <form onsubmit="sendCarForm(event)" id="carForm">
+    <div class="form-group row">
+      <div class="col-auto">
+        <label for="inlineFormInputPLate">Plate</label>
+        <label class="sr-only" for="inlineFormInputPlate">Plate</label>
+        <input type="text" class="form-control" id="inlineFormInputPlate" />
+        <div class="invalid-feedback">La matricula no es correcta</div>
+      </div>
+      <div class="col-auto">
+        <label for="inlineFormInputBrand">Brand</label>
+        <label class="sr-only" for="inlineFormInputBrand">Brand</label>
+        <input type="text" class="form-control" id="inlineFormInputBrand" />
+      </div>
+      <div class="col-auto">
+        <label for="inlineFormInputColor">Color</label>
+        <label class="sr-only" for="inlineFormInputColor">Color</label>
+        <input type="text" class="form-control" id="inlineFormInputColor" />
+      </div>
+    </div>
+    <div class="ml-3">
+      <button type="submit" class="btn btn-primary">Create Car</button>
+    </div>
+  </form>
+
+  <form onsubmit="sendWheelForm(event)" id="WheelForm" class="d-none">
+    <div class="form-group row">
+      <div class="col-auto">
+        <label for="inlineFormInputMR1">Marca Rueda 1</label>
+        <label class="sr-only" for="inlineFormInputMR1">Marca Rueda 1</label>
+        <input type="text" class="form-control" id="inlineFormInputMR1" />
+      </div>
+      <div class="col-auto">
+        <label for="inlineFormInputDR1">Diámetro Rueda 1</label>
+        <label class="sr-only" for="inlineFormInputDR1">Diámetro Rueda1</label>
+        <input type="text" class="form-control" id="inlineFormInputDR1" />
+        <div class="invalid-feedback">
+          El diámetro de la rueda 1 no es correcto
+        </div>
+      </div>
+      <div class="col-auto">
+        <label for="inlineFormInputMR2">Marca Rueda 2</label>
+        <label class="sr-only" for="inlineFormInputMR2">Marca Rueda 2</label>
+        <input type="text" class="form-control" id="inlineFormInputMR2" />
+      </div>
+      <div class="col-auto">
+        <label for="inlineFormInputDR2">Diámetro Rueda 2</label>
+        <label class="sr-only" for="inlineFormInputDR2">Diámetro Rueda 2</label>
+        <input type="text" class="form-control" id="inlineFormInputDR2" />
+        <div class="invalid-feedback">
+          El diámetro de la rueda 2 no es correcto
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-auto">
+        <label for="inlineFormInputMR3">Marca Rueda 3</label>
+        <label class="sr-only" for="inlineFormInputMR3">Marca Rueda 3</label>
+        <input type="text" class="form-control" id="inlineFormInputMR3" />
+      </div>
+      <div class="col-auto">
+        <label for="inlineFormInputDR3">Diámetro Rueda 3</label>
+        <label class="sr-only" for="inlineFormInputDR3">Diámetro Rueda 3</label>
+        <input type="text" class="form-control" id="inlineFormInputDR3" />
+        <div class="invalid-feedback">
+          El diámetro de la rueda 3 no es correcto
+        </div>
+      </div>
+      <div class="col-auto">
+        <label for="inlineFormInputMR4">Marca Rueda 4</label>
+        <label class="sr-only" for="inlineFormInputMR4">Marca Rueda 4</label>
+        <input type="text" class="form-control" id="inlineFormInputMR4" />
+      </div>
+      <div class="col-auto">
+        <label for="inlineFormInputDR4">Diámetro Rueda 4</label>
+        <label class="sr-only" for="inlineFormInputDR4">Diámetro Rueda 4</label>
+        <input type="text" class="form-control" id="inlineFormInputDR4" />
+        <div class="invalid-feedback">
+          El diámetro de la rueda 4 no es correcto
+        </div>
+      </div>
+    </div>
+    <div class="ml-3">
+      <button type="submit" class="btn btn-primary">Add Wheels</button>
+    </div>
+  </form>
+
+  <div id="carInfo"></div>
+</body>
